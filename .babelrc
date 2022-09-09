@@ -1,0 +1,15 @@
+{
+  "presets": [
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ],
+    "@babel/env",
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    ["@babel/transform-runtime"]
+  ]
+}
