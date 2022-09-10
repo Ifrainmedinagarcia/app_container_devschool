@@ -1,0 +1,39 @@
+.header__nav{
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--backgound);
+  box-shadow: var(--shadow);
+}
+
+.menu{
+  position: absolute;
+  display: flex;
+}
+
+.menu > .nav {
+  color: rgb(92, 92, 92);
+  text-decoration: none;
+  list-style: none;
+  padding: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.nav-active{
+  color: var(--primary);
+  text-decoration: none;
+  list-style: none;
+  padding: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.menu > .nav:hover {
+  color: var(--primary)
+}

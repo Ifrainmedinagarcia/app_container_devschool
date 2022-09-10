@@ -1,8 +1,8 @@
 const { HotModuleReplacementPlugin } = require('webpack');
+const { MFLiveReloadPlugin } = require("@module-federation/fmr");
 const deps = require("./package.json").dependencies;
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-const { MFLiveReloadPlugin } = require("@module-federation/fmr");
 const path = require("path");
 
 const rulesForTs = {
@@ -49,18 +49,11 @@ module.exports = (env, arg) => {
     resolve: {
       extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
     },
-    
 
     devServer: {
       port: 3000,
       historyApiFallback: true,
       open: true,
-      liveReload: true,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-        "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
-      }
     },
 
     module: { rules },
@@ -68,16 +61,17 @@ module.exports = (env, arg) => {
     plugins: [
       new HotModuleReplacementPlugin(),
       new MFLiveReloadPlugin({
-        port: 3000, // the port your app runs on
-        container: "app_container", // the name of your app, must be unique
-        standalone: true, // false uses chrome extention
+        port: 3000,
+        container: "app_container",
+        standalone: false,
       }),
       new ModuleFederationPlugin({
         name: "app_container",
         filename: "remoteEntry.js",
         remotes: {},
         exposes: {
-          "./Header": "./src/Header"
+          "./Header": "./src/shared/components/header/Header",
+          "./Footer": "./src/shared/components/footer/Footer"
         },
         shared: {
           ...deps,
