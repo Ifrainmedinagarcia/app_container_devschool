@@ -1,5 +1,6 @@
 import Home from '../components/pages/Home/Home';
-import Vender from '../components/pages/Vender';
+
+import { LazyExoticComponent } from 'react';
 
 
 type JSXComponent = () => JSX.Element
@@ -7,7 +8,7 @@ type JSXComponent = () => JSX.Element
 interface Route {
   path: string;
   to: string;
-  Component: JSXComponent;
+  Component: JSXComponent | LazyExoticComponent<JSXComponent>;
   name: string
 }
 
@@ -18,10 +19,10 @@ export const routes: Route[] = [
     Component: Home,
     name: "Home"
   },
-  {
+  /* {
     path: "/vender",
     to: "/vender",
-    Component: Vender,
+    Component: Man,
     name: "Vender"
-  }
+  } */
 ]
