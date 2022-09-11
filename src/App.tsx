@@ -1,11 +1,14 @@
-import Home from "./components/Home";
-import Footer from "./shared/components/footer/Footer";
-import Header from "./shared/components/header/Header";
+import Navigation from "./routes/Navigation";
+import { BrowserRouter } from 'react-router-dom';
+import Footer from "./shared/components/Footer/Footer";
 
 
 function App(): JSX.Element {
   return (
-    <Header />
+    <BrowserRouter>
+      <Navigation />
+      <Footer/>
+    </BrowserRouter>
   );
 }
 

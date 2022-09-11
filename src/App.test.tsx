@@ -4,6 +4,8 @@ import App from "./App";
 
 describe('Name of the group', () => {
   test('should ', () => {
-    render(<App/>)
+    render(
+      <App />
+    )
   });
 });

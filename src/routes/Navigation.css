@@ -7,6 +7,7 @@
   justify-content: center;
   background-color: var(--backgound);
   box-shadow: var(--shadow);
+  z-index: 1;
 }
 
 .menu{
@@ -36,4 +37,34 @@
 
 .menu > .nav:hover {
   color: var(--primary)
+}
+
+.car{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 100px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.car__img{
+  width: 30px;
+  height: 30px; 
+}
+
+.amount{
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 20px;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+  height: 20px;
+  background-color: red;
+  border-radius: 200px;
 }

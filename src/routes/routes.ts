@@ -1,32 +1,27 @@
-import Home from '../components/Home';
+import Home from '../components/pages/Home/Home';
+import Vender from '../components/pages/Vender';
 
 
 type JSXComponent = () => JSX.Element
 
-interface Route{
+interface Route {
   path: string;
   to: string;
   Component: JSXComponent;
   name: string
-} 
+}
 
 export const routes: Route[] = [
   {
-    path:"/",
-    to:"/",
+    path: "/",
+    to: "/",
     Component: Home,
     name: "Home"
   },
- /*  {
-    path:"/mfe1",
-    to:"/mfe1",
-    //Component: "App",
-    name: "MFE1"
-  },
   {
-    path:"/mfe2",
-    to:"/mfe2",
-    //Component: "App",
-    name: "MFE2"
-  } */
+    path: "/vender",
+    to: "/vender",
+    Component: Vender,
+    name: "Vender"
+  }
 ]

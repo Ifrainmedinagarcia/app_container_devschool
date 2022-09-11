@@ -57,6 +57,7 @@ module.exports = (env, arg) => {
     },
 
     module: { rules },
+ 
 
     plugins: [
       new HotModuleReplacementPlugin(),
@@ -70,8 +71,7 @@ module.exports = (env, arg) => {
         filename: "remoteEntry.js",
         remotes: {},
         exposes: {
-          "./Header": "./src/shared/components/header/Header",
-          "./Footer": "./src/shared/components/footer/Footer"
+         
         },
         shared: {
           ...deps,
