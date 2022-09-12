@@ -1,4 +1,4 @@
-.container__home{
+.container__home {
   position: absolute;
   width: 100%;
   top: 50px;
@@ -6,13 +6,13 @@
   z-index: -1;
 }
 
-.main__img{
+.main__img {
   object-fit: cover;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 }
 
-.container__cards{
+.container__cards {
   position: relative;
   display: flex;
   flex-wrap: wrap;

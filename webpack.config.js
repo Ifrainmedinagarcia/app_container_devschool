@@ -43,7 +43,7 @@ module.exports = (env, arg) => {
     output: {
       filename: isProduction ? "[name].[contenthash].js" : "index.js",
       path: path.resolve(__dirname, "build"),
-      publicPath: 'auto',
+      publicPath: 'http://localhost:3000/',
     },
 
     resolve: {
@@ -52,8 +52,10 @@ module.exports = (env, arg) => {
 
     devServer: {
       port: 3000,
-      historyApiFallback: true,
       open: true,
+      historyApiFallback: {
+        index: '/index.html'
+      }
     },
 
     module: { rules },
@@ -85,6 +87,10 @@ module.exports = (env, arg) => {
           "react-dom": {
             singleton: true,
             requiredVersion: deps["react-dom"],
+          },
+          'react-router-dom': {
+            singleton: true,
+            version: deps['react-router-dom']
           },
         },
       }),
