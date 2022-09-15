@@ -46,6 +46,8 @@ module.exports = (env, arg) => {
       publicPath: 'http://localhost:3000/',
     },
 
+    devtool: "source-map",
+
     resolve: {
       extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
     },
@@ -76,7 +78,6 @@ module.exports = (env, arg) => {
         },
         exposes: {
           "./Header": "./src/shared/components/Header/Header",
-          "./Footer": "./src/shared/components/Footer/Footer"
         },
         shared: {
           ...deps,
