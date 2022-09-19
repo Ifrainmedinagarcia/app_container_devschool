@@ -43,7 +43,6 @@ module.exports = (env, arg) => {
     output: {
       filename: isProduction ? "[name].[contenthash].js" : "index.js",
       path: path.resolve(__dirname, "build"),
-      publicPath: 'http://localhost:3000/',
     },
 
     devtool: "source-map",
@@ -64,12 +63,12 @@ module.exports = (env, arg) => {
  
 
     plugins: [
-      new HotModuleReplacementPlugin(),
+/*       new HotModuleReplacementPlugin(),
       new MFLiveReloadPlugin({
         port: 3000,
         container: "app_container",
         standalone: false,
-      }),
+      }), */
       new ModuleFederationPlugin({
         name: "app_container",
         filename: "remoteEntry.js",
