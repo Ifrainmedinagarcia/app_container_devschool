@@ -17,14 +17,14 @@ interface Route {
 
 export const routes: Route[] = [
   {
-    path: "/",
-    to: "/",
+    path: "/app_container_devschool",
+    to: "/app_container_devschool",
     Component: Home,
     name: "Home"
   },
   {
-    path: "man/*",
-    to: "/man",
+    path: "/app_container_devschool/man/*",
+    to: "/app_container_devschool/man",
     Component: Man
   }
 ]
