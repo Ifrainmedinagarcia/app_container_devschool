@@ -1,1 +1,1 @@
-declare module "clothes/App"
+declare module "store/App"

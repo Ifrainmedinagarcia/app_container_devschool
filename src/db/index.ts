@@ -6,7 +6,7 @@ export const options: Options[] = [
   {
     name: "ir a la tienda",
     img: "https://img.freepik.com/foto-gratis/familia-centro-comercial_1098-15029.jpg?w=2000&t=st=1663075901~exp=1663076501~hmac=bbbf6aee60a0c5ae7b9ef74dac9873bc7fb45da1e0ee85af3d14d858020e6769",
-    to: "/man"
+    to: "/store/all"
   },
 
   {

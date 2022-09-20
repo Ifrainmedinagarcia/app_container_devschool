@@ -2,7 +2,7 @@ import Home from '../components/pages/Home/Home';
 
 import { LazyExoticComponent, lazy } from 'react';
 
-const Man = lazy(() => import("clothes/App"))
+const Store = lazy(() => import("store/App"))
 
 
 type JSXComponent = () => JSX.Element
@@ -23,8 +23,8 @@ export const routes: Route[] = [
     name: "Home"
   },
   {
-    path: "/man/*",
-    to: "/man",
-    Component: Man
+    path: "/store/*",
+    to: "/store/all",
+    Component: Store
   }
 ]

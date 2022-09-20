@@ -71,8 +71,8 @@ module.exports = (env, arg) => {
         name: "app_container",
         filename: "remoteEntry.js",
         remotes: {
-          "clothes": "clothes@https://ifrainmedinagarcia.github.io/MFE1_devschool/remoteEntry.js"
-          //"clothes": "clothes@http://localhost:3001/remoteEntry.js",
+          "store": "store@https://ifrainmedinagarcia.github.io/MFE1_devschool/remoteEntry.js"
+          //"store": "store@http://localhost:3001/remoteEntry.js",
         },
         exposes: {
           "./Header": "./src/shared/components/Header/Header",
