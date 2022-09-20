@@ -61,7 +61,7 @@ module.exports = (env, arg) => {
 
 
     plugins: [
-/*       new HotModuleReplacementPlugin(),
+     /*  new HotModuleReplacementPlugin(),
       new MFLiveReloadPlugin({
         port: 3000,
         container: "app_container",
@@ -72,6 +72,7 @@ module.exports = (env, arg) => {
         filename: "remoteEntry.js",
         remotes: {
           "clothes": "clothes@https://ifrainmedinagarcia.github.io/MFE1_devschool/remoteEntry.js"
+          //"clothes": "clothes@http://localhost:3001/remoteEntry.js",
         },
         exposes: {
           "./Header": "./src/shared/components/Header/Header",

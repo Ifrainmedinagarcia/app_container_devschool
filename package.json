@@ -10,6 +10,7 @@
     "clear": "rm -rf build",
     "cypress:open": "cypress open"
   },
+  "homepage": "https://ifrainmedinagarcia.github.io",
   "keywords": [],
   "author": "Ifrain",
   "license": "ISC",
