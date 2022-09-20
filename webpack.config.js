@@ -71,7 +71,8 @@ module.exports = (env, arg) => {
         name: "app_container",
         filename: "remoteEntry.js",
         remotes: {
-          "store": "store@https://ifrainmedinagarcia.github.io/MFE1_devschool/remoteEntry.js"
+          "store": "store@https://ifrainmedinagarcia.github.io/MFE1_devschool/remoteEntry.js",
+          "register_page": "register_page@http://localhost:3003/remoteEntry.js"
           //"store": "store@http://localhost:3001/remoteEntry.js",
         },
         exposes: {
