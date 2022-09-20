@@ -54,13 +54,11 @@ module.exports = (env, arg) => {
     devServer: {
       port: 3000,
       open: true,
-      historyApiFallback: {
-        index: '/index.html'
-      }
+      historyApiFallback: true
     },
 
     module: { rules },
- 
+
 
     plugins: [
 /*       new HotModuleReplacementPlugin(),

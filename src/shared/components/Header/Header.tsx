@@ -9,7 +9,12 @@ const Header = () => {
     <header>
       <nav className="header__nav">
         <ul className="menu">
-          {routes.map(({ name, to }) => <NavLink key={to} to={to} className={({ isActive }) => isActive ? "nav-active" : "nav"}>{name}</NavLink>)}
+          {routes.map(({ name, to }) => {
+            if (!name) return
+            return (
+              <NavLink key={to} to={to} className={({ isActive }) => isActive ? "nav-active" : "nav"}>{name}</NavLink>
+            )
+          })}
         </ul>
       </nav>
     </header>
