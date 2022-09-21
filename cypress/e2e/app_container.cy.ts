@@ -8,11 +8,8 @@ const addToCart = () => {
 }
 
 describe('Container App', () => {
-
-  beforeEach(() => {
-    cy.visit('http://localhost:3000/#/');
-
-  })
+  
+  beforeEach(() => cy.visit('http://localhost:3000/#/'))
 
   it('page can be open', () => {
     cy.contains("Home")
@@ -20,11 +17,8 @@ describe('Container App', () => {
 
   it('page should redirect to MFE1 and add three products to cart', () => {
     cy.get('.link__category:nth-child(1) .categories__name').click();
-
     addToCart()
-
     cy.contains("3")
-
   });
 
   it('should render Cart Page and delete all products', () => {
@@ -32,7 +26,7 @@ describe('Container App', () => {
     addToCart()
     cy.contains("3")
     cy.get('.cart').click();
-    cy.get('.btn__delete').click({ multiple: true });
+    cy.get('.btn__delete').first().click();
   });
 
 }); 

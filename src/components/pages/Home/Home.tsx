@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import { options } from "../../../db"
 import Card from "../../Card/Card"
 import "./Home.css"
