@@ -8,7 +8,7 @@ const addToCart = () => {
 }
 
 describe('Container App', () => {
-  
+
   beforeEach(() => cy.visit('http://localhost:3000/#/'))
 
   it('page can be open', () => {
@@ -27,6 +27,36 @@ describe('Container App', () => {
     cy.contains("3")
     cy.get('.cart').click();
     cy.get('.btn__delete').first().click();
+  });
+
+  it('should show the error messages when the user send the form empty', () => {
+    cy.get('.link__category:nth-child(2) .categories__name').click();
+
+    cy.get('form').submit();
+
+    cy.contains("nombre es requerido")
+    cy.contains("apellido es requerido")
+    cy.contains("email es requerido")
+    cy.contains("region es requerido")
+    cy.contains("password es requerido")
+
+  });
+
+  it('should fill the form and send it', () => {
+    cy.get('.link__category:nth-child(2) .categories__name').click();
+    cy.get('form').within(() => {
+      cy.get('input[name=nombre]').type('Ifrain')
+      cy.get('input[name=apellido]').type('Medina')
+      cy.get('input[name=email]').type('medina.ifrain@gmail.com')
+      cy.get('[type="radio"]').first().check()
+      cy.get('select').select('América')
+      cy.get('input[name=password]').type('123456')
+    })
+
+    cy.get('form').submit();
+
+    cy.contains("Te registraste con éxito")
+
   });
 
 }); 
