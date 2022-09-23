@@ -21,7 +21,7 @@ export const routes: Route[] = [
     path: "/",
     to: "/",
     Component: Home,
-    name: "Home"
+    name: "Hola"
   },
   {
     path: "/store/*",
